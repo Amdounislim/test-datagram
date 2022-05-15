@@ -1,64 +1,62 @@
-import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { login } from '../../services/storeApi'
+import { login } from "../../services/storeApi";
+
+import "./style.css";
 
 const Login = () => {
-  const navigate = useNavigate()
-  const [form, setForm] = useState({ username: '', password: '' })
-  const [loading, setLoading] = useState(true)
+  const navigate = useNavigate();
+  const [form, setForm] = useState({ username: "", password: "" });
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (localStorage.getItem('token')) {
-      navigate('/home', { replace: true })
+    if (localStorage.getItem("token")) {
+      navigate("/dashboard", { replace: true });
     }
-    setLoading(false)
-  }, [navigate])
+    setLoading(false);
+  }, [navigate]);
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     try {
       // await login(form.username, form.password)
-      await login()
-      navigate('/home', { replace: true })
+      await login();
+      navigate("/dashboard", { replace: true });
     } catch (error) {
-      alert('Invalid credentials')
+      alert("Invalid credentials");
     }
-  }
+  };
 
   const handleChange = (e) => {
-    setForm((prevForm) => ({ ...prevForm, [e.target.name]: e.target.value }))
-  }
+    setForm((prevForm) => ({ ...prevForm, [e.target.name]: e.target.value }));
+  };
   if (loading) {
-    return <h1>Loading...</h1>
+    return <h1>Loading...</h1>;
   }
   return (
-    <section>
-      <div>
-        <h1>Welcome to Store Admin</h1>
-      </div>
+    <div class="center">
+      <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <label>Username</label>
-        <input
-          onChange={handleChange}
-          required
-          name='username'
-          type='text'
-          placeholder='Username...'
-        />
-        <label>Password</label>
-        <input
-          onChange={handleChange}
-          required
-          type='password'
-          name='password'
-          placeholder='**********'
-        />
-        <button>Submit</button>
+        <div class="txt_field">
+          <input type="text" required onChange={handleChange} name="username" />
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input
+            type="password"
+            required
+            onChange={handleChange}
+            name="username"
+          />
+          <label>Password</label>
+        </div>
+        <div class="pass">Forgot Password ?</div>
+        <input type="submit" value="login" />
       </form>
-    </section>
-  )
-}
+    </div>
+  );
+};
 
-export default Login
+export default Login;

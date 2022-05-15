@@ -6,7 +6,7 @@ const PrivateRoute = ({ component: RouteComponent }) => {
 
   useEffect(() => {
     if (!localStorage.getItem("token")) {
-      navigate("/");
+      navigate("/login");
     }
   }, [navigate]);
 

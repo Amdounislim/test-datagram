@@ -48,6 +48,12 @@ export const queryCarts = async (params) => queryData('/carts', params)
  */
 export const queryProducts = async (params) => queryData('/products', params)
 
+/**
+ * @description GET /products/categories
+ * @param {{id:string , sort:'asc' | 'desc' , limit : string}} params
+ */
+export const queryCategories = async (params) => queryData('/products/categories', params)
+
 
 /**
  * @description Delete user /users/id
