@@ -39,8 +39,8 @@ const Users = () => {
               placeholder="Search by full_name..."
               onChange={(e) => setFullName(e.target.value)}
             />
-            <button type="submit" class="search-btn">
-              <i class="bx bx-search"></i>
+            <button type="submit" className="search-btn">
+              <i className="bx bx-search"></i>
             </button>
           </div>
           <div className="form-input">
@@ -49,8 +49,8 @@ const Users = () => {
               placeholder="Search by email..."
               onChange={(e) => setEmail(e.target.value)}
             />
-            <button type="submit" class="search-btn">
-              <i class="bx bx-search" ></i>
+            <button type="submit" className="search-btn">
+              <i className="bx bx-search" ></i>
             </button>
           </div>
         </div>

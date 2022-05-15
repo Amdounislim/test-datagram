@@ -63,29 +63,23 @@ export const deleteProduct = async (id) => {
 /**
  * @description sort user /users?sort=desc
  */
-export const sortUser=async(id)=>{
+export const sortUser = async (id) => {
   try {
     const res = await api.get(`/users?sort=desc`)
-    return(res.data)
-  } catch (error) {
-    
-  }
-}
-
-export const deleteUser = async (id) => {
-  try {
-    const res = await api.delete(`/users/${id}`)
-    console.log(res.data)
+    return res.data
   } catch (error) {}
 }
 
+/**
+ * @description POST PRODUCT /products
+ */
 export const addProduct = async (form) => {
   const res = await api.post('/products', form)
   return res.data
 }
-
-
-
+/**
+ * @description PUT PRODUCT /products/:id
+ */
 export const editProduct = async (form) => {
   const res = await api.put(`/products/${form.id}`, form)
   return res.data

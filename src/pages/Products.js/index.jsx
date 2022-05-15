@@ -22,7 +22,6 @@ const Products = () => {
     try {
       const res = await addProduct(form)
 
-      console.log({res})
 
       setProducts([res, ...products])
     } catch (error) {

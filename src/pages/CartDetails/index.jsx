@@ -64,7 +64,6 @@ const CartDetails = () => {
 
         <div>
           {products.map((product) => {
-            console.log(product.title)
             return (
               <ProductCard key={product.title} withDetails prod={product} />
             )

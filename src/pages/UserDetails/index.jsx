@@ -24,7 +24,6 @@ const UserDetails = () => {
 
     setUser(user)
     setCarts(carts)
-    console.log(user)
     setLoading(false)
   }
 

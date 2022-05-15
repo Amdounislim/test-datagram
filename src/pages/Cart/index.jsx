@@ -14,7 +14,6 @@ const Carts = () => {
   const getCarts = async () => {
     const carts = await queryCarts()
     setCarts(carts)
-    console.log(carts)
     setLoading(false)
   }
 
