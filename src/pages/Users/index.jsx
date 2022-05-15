@@ -14,10 +14,10 @@ const Users = () => {
   const navigate = useNavigate();
 
   const getUsers = async () => {
-    const users = await queryUsers();
-    setUsers(users);
-    setLoading(false);
-  };
+    const users = await queryUsers()
+    setUsers(users)
+    setLoading(false)
+  }
 
   const orderdUsers=async()=>{
     const users = await sortUser();

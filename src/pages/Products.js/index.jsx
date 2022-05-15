@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./style.css";
-import Spinner from "../../components/Spinner";
 import { queryProducts } from "../../services/storeApi";
-import "./style.css";
+import Spinner from "../../components/Spinner";
 import ProductCard from "../../components/ProductCard";
 import { deleteProduct } from "../../services/storeApi";
+import "./style.css";
 
 const Products = () => {
   const [products, setProducts] = useState([]);

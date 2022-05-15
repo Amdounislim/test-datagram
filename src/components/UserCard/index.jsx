@@ -3,7 +3,7 @@ import "./style.css";
 import { getNameInitial } from "../../utils/formatText";
 import { Link } from "react-router-dom";
 
-const UserCard = ({ user, removeUserById, withDetails = false }) => {
+const UserCard = ({ user, withDetails = false }) => {
   return (
     <li>
       <span className="avatar">
@@ -24,9 +24,7 @@ const UserCard = ({ user, removeUserById, withDetails = false }) => {
         )}
 
         {!withDetails && (
-          <div className="action">
-            <i className="bx bxs-trash"></i>
-
+          <div className='action'>
             <span>
               <Link to={`/users/${user.id}`}>Show details ...</Link>{" "}
             </span>

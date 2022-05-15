@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./style.css";
 import Spinner from "../../components/Spinner";
 import { queryCategories } from "../../services/storeApi";
 import "./style.css";

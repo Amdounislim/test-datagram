@@ -1,0 +1,10 @@
+.carts > * {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  margin: 15px;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+

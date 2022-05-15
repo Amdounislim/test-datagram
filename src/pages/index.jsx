@@ -17,6 +17,7 @@ import Products from "./Products.js";
 
 import UserDetails from './UserDetails'
 import CartDetails from './CartDetails'
+import Carts from "./Cart";
 
 const AppRouter = () => {
   return (
@@ -37,6 +38,7 @@ const AppRouter = () => {
           <Route path='dashboard' element={<PrivateRoute component={Home} />} />
           <Route path='users' element={<PrivateRoute component={Users} />} />
           <Route path='users/:id' element={<UserDetails />} />
+          <Route path='carts' element={<PrivateRoute component={Carts} />} />
           <Route path='carts/:id' element={<CartDetails />} />
 
 
