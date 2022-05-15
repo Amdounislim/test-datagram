@@ -12,6 +12,7 @@ import Sidebar from '../components/Sidebar'
 import Home from './Home'
 import Users from './Users'
 import NotFound from './NotFound'
+import Categories from './Categories'
 
 const AppRouter = () => {
   return (
@@ -51,9 +52,7 @@ const AppRouter = () => {
             path='categories'
             element={
               <PrivateRoute
-                component={() => (
-                  <h1 style={{ textAlign: 'center' }}>categories</h1>
-                )}
+                component={Categories}
               />
             }
           />

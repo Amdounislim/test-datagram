@@ -1,0 +1,23 @@
+#content h1{
+    text-align: center;
+}
+#content main .categories {
+    margin: 15%;
+	display: grid;
+	grid-template-columns: auto auto ;
+	grid-gap: 100px;
+	margin-top: 36px;
+}
+#content main .categories li {
+    padding: 10% 2%;
+	background: var(--light);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+    justify-content: space-evenly;
+
+}
+
+
+
+

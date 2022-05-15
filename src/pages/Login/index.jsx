@@ -36,14 +36,14 @@ const Login = () => {
     return <h1>Loading...</h1>;
   }
   return (
-    <div class="center">
+    <div className="center">
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <div class="txt_field">
+        <div className="txt_field">
           <input type="text" required onChange={handleChange} name="username" />
           <label>Username</label>
         </div>
-        <div class="txt_field">
+        <div className="txt_field">
           <input
             type="password"
             required
@@ -52,7 +52,7 @@ const Login = () => {
           />
           <label>Password</label>
         </div>
-        <div class="pass">Forgot Password ?</div>
+        <div className="pass">Forgot Password ?</div>
         <input type="submit" value="login" />
       </form>
     </div>
