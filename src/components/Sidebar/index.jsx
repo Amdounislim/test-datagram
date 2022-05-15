@@ -14,19 +14,19 @@ const navigation = [
     active: false,
     link: "Carts",
     path: "/carts",
-    icon: "bx bxs-doughnut-chart",
+    icon: "bx bx bxs-cart",
   },
   {
     active: false,
     link: "Products",
     path: "/products",
-    icon: "bx bxs-message-dots",
+    icon: "bx bxl-product-hunt",
   },
   {
     active: false,
     link: "Categories",
     path: "/categories",
-    icon: "bx bxs-group",
+    icon: "bx bxs-category",
   },
 ];
 

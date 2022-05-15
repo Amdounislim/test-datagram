@@ -2,37 +2,36 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 import Spinner from "../../components/Spinner";
-import { queryCategories } from "../../services/storeApi";
+import { queryProducts } from "../../services/storeApi";
 import "./style.css";
+import ProductCard from "../../components/ProductCard";
 
-const Categories = () => {
-  const [categories, setCategories] = useState([]);
+const Products = () => {
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const navigate = useNavigate();
 
-  const getCategories = async () => {
-    const users = await queryCategories();
-    setCategories(users);
+  const getProducts = async () => {
+    const products = await queryProducts();
+    setProducts(products);
     setLoading(false);
   };
 
   useEffect(() => {
-    getCategories();
+    getProducts();
   }, [navigate]);
 
   return (
     <section id="content">
       <main>
-      <h1>Categories</h1>
+        <h1>Products</h1>
         {loading ? (
           <Spinner />
         ) : (
           <ul className="categories">
-            {categories.map((cat, i) => (
-              <li key={i}>
-                <h1>{cat}</h1>
-              </li>
+            {products.map((prod) => (
+              <ProductCard prod={prod} key={prod.id} />
             ))}
           </ul>
         )}
@@ -41,4 +40,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default Products;
