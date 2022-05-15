@@ -5,6 +5,7 @@ import Spinner from "../../components/Spinner";
 import { queryProducts } from "../../services/storeApi";
 import "./style.css";
 import ProductCard from "../../components/ProductCard";
+import { deleteProduct } from "../../services/storeApi";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -16,6 +17,18 @@ const Products = () => {
     const products = await queryProducts();
     setProducts(products);
     setLoading(false);
+  };
+
+  const removeProductById = async (id) => {
+    const confirmlDelete = window.confirm("Are you sure you want to delete");
+    if (!confirmlDelete) return;
+    try {
+      await deleteProduct(id);
+      setProducts(products.filter((prod) => prod.id !== id));
+      // alert('Product Deleted with success')
+    } catch (error) {
+      alert("Product Delete failed");
+    }
   };
 
   useEffect(() => {
@@ -31,7 +44,11 @@ const Products = () => {
         ) : (
           <ul className="categories">
             {products.map((prod) => (
-              <ProductCard prod={prod} key={prod.id} />
+              <ProductCard
+                prod={prod}
+                key={prod.id}
+                removeProductById={removeProductById}
+              />
             ))}
           </ul>
         )}

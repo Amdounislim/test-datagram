@@ -56,6 +56,19 @@ export const queryCategories = async (params) => queryData('/products/categories
 
 
 /**
+ * @description Delete product/users/id
+ */
+ export const deleteProduct=async(id)=>{
+  try {
+    const res = await api.delete(`/products/${id}`)
+    return res.data
+  } catch (error) {
+    
+  }
+}
+
+
+/**
  * @description Delete user /users/id
  */
 export const deleteUser=async(id)=>{
