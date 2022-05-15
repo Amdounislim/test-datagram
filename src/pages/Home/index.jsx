@@ -53,8 +53,8 @@ const Home = () => {
         <ul className='info-box'>
           <Link to="/users">
 				<li>
-					<i class='bx bxs-group' ></i>
-					<span class="text">
+					<i className='bx bxs-group' ></i>
+					<span className="text">
 						<h3>{users}</h3>
 						<h3>Users</h3>
 					</span>
@@ -62,8 +62,8 @@ const Home = () => {
         </Link>
         <Link to="/products">
           	<li>
-					<i class='bx bxl-product-hunt' ></i>
-					<span class="text">
+					<i className='bx bxl-product-hunt' ></i>
+					<span className="text">
 						<h3>{products}</h3>
 						<h3>Products</h3>
 					</span>
@@ -71,8 +71,8 @@ const Home = () => {
         </Link>
         <Link to="/carts" >
 				<li>
-					<i class='bx bxs-cart' ></i>
-					<span class="text">
+					<i className='bx bxs-cart' ></i>
+					<span className="text">
 						<h3>{carts}</h3>
 						<h3>Carts</h3>
 					</span>
@@ -80,8 +80,8 @@ const Home = () => {
         </Link>
         <Link to='/categories'>
 				<li>
-					<i class='bx bxs-category' ></i>
-					<span class="text">
+					<i className='bx bxs-category' ></i>
+					<span className="text">
 						<h3>{categories}</h3>
 						<h3>Categories</h3>
 					</span>

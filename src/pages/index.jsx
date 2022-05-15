@@ -15,6 +15,9 @@ import NotFound from "./NotFound";
 import Categories from "./Categories";
 import Products from "./Products.js";
 
+import UserDetails from './UserDetails'
+import CartDetails from './CartDetails'
+
 const AppRouter = () => {
   return (
     <Router>
@@ -31,6 +34,12 @@ const AppRouter = () => {
         >
           <Route path="home" element={<PrivateRoute component={Home} />} />
           <Route path="users" element={<PrivateRoute component={Users} />} />
+          <Route path='dashboard' element={<PrivateRoute component={Home} />} />
+          <Route path='users' element={<PrivateRoute component={Users} />} />
+          <Route path='users/:id' element={<UserDetails />} />
+          <Route path='carts/:id' element={<CartDetails />} />
+
+
           <Route
             path="carts"
             element={
@@ -55,4 +64,4 @@ const AppRouter = () => {
   );
 };
 
-export default AppRouter;
+export default AppRouter

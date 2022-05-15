@@ -1,8 +1,14 @@
-import React from "react";
-import "./style.css";
+import React from 'react'
+import './style.css'
 
 const Spinner = () => {
-  return <div className="loader"></div>;
-};
+  return (
+    <section id='content'>
+      <main>
+        <div className='loader'></div>
+      </main>
+    </section>
+  )
+}
 
-export default Spinner;
+export default Spinner
