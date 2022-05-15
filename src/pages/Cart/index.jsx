@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { queryCarts } from '../../services/storeApi'
 import Spinner from '../../components/Spinner'
 import './style.css'
+import CartCard from '../../components/CartCard'
 
 const Carts = () => {
   const [carts, setCarts] = useState([])
@@ -32,16 +33,7 @@ const Carts = () => {
 
         <ul className='carts'>
           {carts.map((cart) => (
-            <li>
-              <h3>Total Products : {cart.products.length}</h3>
-              <h4>
-                <span className='text'>
-                <i className='bx bxs-time'></i>
-                  <h3>Date</h3>
-                  <h3>{cart.date.match(/(\d{2})-(\d{2})-(\d{2})/gi)[0]}</h3>
-                </span>
-              </h4>
-            </li>
+            <CartCard key={cart.id} cart={cart} />
           ))}
         </ul>
       </main>

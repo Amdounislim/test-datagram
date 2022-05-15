@@ -1,0 +1,13 @@
+.cart-card {
+  margin: 15px;
+  border-radius: 15px;
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cart-card > span {
+  opacity: 0.5;
+}

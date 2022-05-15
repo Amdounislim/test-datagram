@@ -1,0 +1,10 @@
+.bxs-comment-add {
+    float: right;
+  font-size: 2rem;
+  color: rgb(0, 140, 255);
+  cursor: pointer;
+}
+.bxs-comment-add:hover {
+  font-size: 2.5rem;
+  transition: 0.5s ease-in-out;
+}

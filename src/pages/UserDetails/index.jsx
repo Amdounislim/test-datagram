@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import CartCard from '../../components/CartCard'
 import Spinner from '../../components/Spinner'
 import UserCard from '../../components/UserCard'
 import { queryCarts, queryUsers } from '../../services/storeApi'
@@ -46,19 +47,7 @@ const UserDetails = () => {
         </ul>
         <ul style={{ display: 'flex', flexDirection: 'column', width: '80%' }}>
           {carts.map((cart) => {
-            return (
-              <li key={cart.id} className='cart-card'>
-                <h3>Total Products : {cart.products.length}</h3>
-
-                <p>
-                  <Link to={`/carts/${cart.id}`}>Show more details ... </Link>
-                </p>
-
-                <span>
-                  Date : {cart.date.match(/(\d{2})-(\d{2})-(\d{2})/gi)[0]}
-                </span>
-              </li>
-            )
+            return <CartCard key={cart.id} cart={cart} />
           })}
         </ul>
       </main>
