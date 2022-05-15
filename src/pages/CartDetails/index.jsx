@@ -19,8 +19,6 @@ const CartDetails = () => {
     getCartsAndRelatedProducts(id)
   }, [])
 
-
-
   const getCartsAndRelatedProducts = async (id) => {
     const cart = await queryCarts({ id })
     const products = []
@@ -53,6 +51,13 @@ const CartDetails = () => {
             <span className='text'>
               <h3>Total Price</h3>
               <h3>{totalPrice}$</h3>
+            </span>
+          </li>
+          <li>
+            <i className='bx bxs-time'></i>
+            <span className='text'>
+              <h3>Date</h3>
+              <h3>{cart.date.match(/(\d{2})-(\d{2})-(\d{2})/gi)[0]}</h3>
             </span>
           </li>
         </ul>
