@@ -6,6 +6,7 @@
 }
 .productCard {
 	padding: 20px;
+	margin: 15px 0;
 	background: var(--light);
 	border-radius: 20px;
 	display: flex;
