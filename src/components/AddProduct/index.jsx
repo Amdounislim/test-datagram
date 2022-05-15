@@ -45,7 +45,7 @@ const AddProduct = ({
   return (
     <div>
       <i
-        class={isEdit ? 'bx bxs-edit' : 'bx bxs-comment-add'}
+        className={isEdit ? 'bx bxs-edit' : 'bx bxs-comment-add'}
         onClick={() => setIsOpen(true)}
       ></i>
       <Modal isOpen={isShow} setIsOpen={setIsOpen}>
