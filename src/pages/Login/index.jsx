@@ -12,7 +12,7 @@ const Login = () => {
 
   useEffect(() => {
     if (localStorage.getItem("token")) {
-      navigate("/dashboard", { replace: true });
+      navigate("/home", { replace: true });
     }
     setLoading(false);
   }, [navigate]);
@@ -23,7 +23,7 @@ const Login = () => {
     try {
       // await login(form.username, form.password)
       await login();
-      navigate("/dashboard", { replace: true });
+      navigate("/home", { replace: true });
     } catch (error) {
       alert("Invalid credentials");
     }

@@ -29,7 +29,7 @@ const AppRouter = () => {
             </>
           }
         >
-          <Route path="dashboard" element={<PrivateRoute component={Home} />} />
+          <Route path="home" element={<PrivateRoute component={Home} />} />
           <Route path="users" element={<PrivateRoute component={Users} />} />
           <Route
             path="carts"
@@ -47,7 +47,7 @@ const AppRouter = () => {
             path="categories"
             element={<PrivateRoute component={Categories} />}
           />
-          <Route index element={<Navigate to="/dashboard" />} />
+          <Route index element={<Navigate to="/home" />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

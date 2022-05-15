@@ -5,8 +5,8 @@ import "./style.css";
 const navigation = [
   {
     active: false,
-    link: "Dashboard",
-    path: "/dashboard",
+    link: "Home",
+    path: "/home",
     icon: "bx bxs-dashboard",
   },
   { active: true, link: "Users", path: "/users", icon: "bx bxs-group" },

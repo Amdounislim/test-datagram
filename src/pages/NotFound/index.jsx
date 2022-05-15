@@ -1,7 +1,19 @@
-import React from 'react'
+import React from "react";
 
 const NotFound = () => {
-  return <h1 style={{ textAlign: 'center' }}>NotFound</h1>
-}
+  return (
+    <section id="content">
+      <main
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <h1>404 Page Not Found</h1>
+      </main>
+    </section>
+  );
+};
 
-export default NotFound
+export default NotFound;
