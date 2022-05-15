@@ -69,13 +69,14 @@ export const queryCategories = async (params) => queryData('/products/categories
 
 
 /**
- * @description Delete user /users/id
+ * @description sort user /users?sort=desc
  */
-export const deleteUser=async(id)=>{
+export const sortUser=async(id)=>{
   try {
-    const res = await api.delete(`/users/${id}`)
-    console.log(res.data)
+    const res = await api.get(`/users?sort=desc`)
+    return(res.data)
   } catch (error) {
     
   }
 }
+
